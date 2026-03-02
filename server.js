@@ -7,6 +7,25 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
+const cors = require("cors");
+
+const allowedOrigins = [
+  "http://localhost:3000", // local dev
+  "https://your-frontend.vercel.app", // replace with real domain
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // allow server-to-server
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 const PORT = process.env.PORT || 3001;
 
 // Path where we store cached response.
