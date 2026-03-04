@@ -1,5 +1,3 @@
-/* Simple CollectAPI backend with file-based caching. */
-
 require("dotenv").config();
 
 const express = require("express");
@@ -338,6 +336,6 @@ app.get("/api/board", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
+  console.log(`Server listening on :${PORT}`);
 });
 
