@@ -211,7 +211,7 @@ async function fetchFromCollectApi(url) {
 
   const headers = {
     "content-type": "application/json",
-    authorization: `apikey ${apiKey}`,
+    authorization: `${apiKey}`,
   };
 
   const res = await fetch(url, { headers, cache: "no-store" });
