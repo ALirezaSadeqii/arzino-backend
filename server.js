@@ -9,7 +9,7 @@ const cors = require("cors");
 
 const allowedOrigins = [
   "http://localhost:3000", // local dev
-  "https://arzino-eight.vercel.app/", // replace with real domain
+  "https://arzino-eight.vercel.app", // replace with real domain
 ];
 
 app.use(
