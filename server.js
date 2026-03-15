@@ -31,7 +31,7 @@ const CACHE_FILE = path.join(__dirname, "cache.json");
 const CACHE_TTL_MS = 65 * 60 * 1000; // 65 minutes
 
 
-const DEFAULT_FOREX_SPREAD = 0.008;
+const DEFAULT_FOREX_SPREAD = 0.0005;// formerly 0.008 total spread 1.6%
 const DEFAULT_CRYPTO_SPREAD = 0.012;
 
 const FOREX_SPREAD = (() => {
